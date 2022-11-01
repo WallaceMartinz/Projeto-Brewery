@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permissão de produção</title>
+</head>
+<body>
+    
+    <h2>Permissão de produção - Projeto Brewary</h2>
+
+    <select  id="ipt_maltinho" > Maltinho
+        <option value="0">0</option>
+        <option value="1">1</option>
+    </select>
+    <br><br>
+    <select  id="ipt_brmalte"> Br Malte
+        <option value="0">0</option>
+        <option value="1">1</option>
+    </select>
+    <br><br>
+    <select  id="craft_malte"> Craft malte
+        <option value="0">0</option>
+        <option value="1">1</option>
+    </select>
+    <br><br>
+    <button onclick="calc()">Validar produção</button>
+
+
+</body>
+</html>
+
+<script>
+    function calc() {
+
+        if (ipt_maltinho.value == 0 && ipt_brmalte.value == 1 && craft_malte.value == 0) {
+            alert('Produzir Larger')
+        }
+        else if (ipt_maltinho.value == 1 && ipt_brmalte.value == 1 && craft_malte.value == 0) {
+            alert('Produzir Larger')
+        }
+        else if (ipt_maltinho.value == 1 && ipt_brmalte.value == 1 && craft_malte.value == 1) {
+            alert('Produzir Ambas')
+        }
+        else if (ipt_maltinho.value == 0  && ipt_brmalte.value == 1 && craft_malte.value == 1) {
+            alert('Produzir Larger')
+        }
+        else if (ipt_maltinho.value == 0 && ipt_brmalte.value == 0 && craft_malte.value == 1) {
+            alert('Produzir Ambas')
+        }
+        else if (ipt_maltinho.value == 1 && ipt_brmalte.value == 0 && craft_malte.value == 0) {
+            alert('Produzir Ambas')
+        } else  {
+            alert('Não é permitido produzir!')
+        }
+
+
+
+
+
+       
+        
+    }
+</script>
